@@ -70,6 +70,7 @@ body{
 #search {
   display: flex;
   align-items: center;
+  flex:1;
 }
 
 #search:focus-within {
@@ -93,7 +94,7 @@ body{
 
 #search input {
   height: 40px;
-  width: 400px;
+  width: 400%;
   padding: 4px 8px;
   border-radius: 0;
   border: 1px solid white;
@@ -695,4 +696,111 @@ h4{
 .footer-bottom p{
     color:#DDD;
     font-size:12px;
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 1024px) {
+
+  .header {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  #search input {
+    width: 250px;
+  }
+
+  .row-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer1 {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .footer-services {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 20px;
+    gap: 30px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+
+  body {
+    padding-top: 120px;
+  }
+
+  .header {
+    position: static;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #search {
+    width: 100%;
+  }
+
+  #search input {
+    width: 100%;
+  }
+
+  .sub-header {
+    overflow-x: auto;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 5px;
+  }
+
+  .nav1,
+  .container {
+    width: 280px;
+    min-width: 280px;
+  }
+
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .container4 {
+    width: 90%;
+    max-width: 320px;
+  }
+
+  .row-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer1 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-lang {
+    flex-direction: column;
+  }
+
+  .logo1 img {
+    margin: 0;
+  }
+
+  .footer-services {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+  }
 }
